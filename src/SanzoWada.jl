@@ -32,11 +32,6 @@ function findcombination()
     findcolors(rand(1:N_COMBINATIONS))
 end
 
-
-function findcombination(combination_id::int)
-    findcolors(combination_id)
-end
-
 function findcombination(combination_id::int)
     findcolors(combination_id)
 end
@@ -52,5 +47,5 @@ getcolors(colors, format) = [color[format] for color in colors]
 getrgb(v) = getcolors(v, :rgb)
 gethex(v) = getcolors(v, :hex)
 getlab(v) = getcolors(v, :lab)
-
+getnames(colors) = [color[:name] for color in colors]
 end
